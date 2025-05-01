@@ -39,6 +39,7 @@ void menu() {
     printf("\n2 - Fatoriais");
     printf("\n3 - Verificar Palíndromo");
     printf("\n4 - Verificar Substring");
+    printf("\nDigite o número do exercício: ");
 
     scanf("%i", &opcao);
 
@@ -54,6 +55,8 @@ void menu() {
 }
 
 int main() {
+    setlocale(LC_ALL, "");
+
     menu();
     return 0;
 }
