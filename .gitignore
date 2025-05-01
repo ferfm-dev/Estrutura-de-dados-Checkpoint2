@@ -1,0 +1,22 @@
+# Ignorar arquivos de build
+*.o
+*.out
+*.obj
+*.exe
+*.gch
+
+# Ignorar diretórios de compilação
+output/
+build/
+bin/
+
+# Arquivos temporários de editores
+*~
+*.swp
+*.bak
+
+# Arquivos de log
+*.log
+
+# Arquivos do VSCode
+.vscode/
