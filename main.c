@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <locale.h>
+
+int sequencia_fibonacci() {
+    int tamanho = 0;
+    printf("\nDigite a quantidade de termos da sequência de Fibonacci (1 a 50): ");
+    scanf("%i", &tamanho);
+    
+    
+    
+    if (tamanho < 1)
+    tamanho = 1;
+    else if (tamanho > 50)
+    tamanho = 50;
+    
+    
+    int vetor_sequencia[tamanho];
+    vetor_sequencia[0] = 0;
+    
+    if (tamanho > 1)
+    vetor_sequencia[1] = 1;
+    
+    
+    for (int i = 2; i < tamanho; i++) {
+        vetor_sequencia[i] = vetor_sequencia[i - 2] + vetor_sequencia[i - 1];
+    }
+    
+    printf("\nSequência de Fibonacci: ");
+    for (int i = 0; i < tamanho; i++) 
+        printf("%i ", vetor_sequencia[i]);
+
+    return 0;
+}
+
+void menu() {
+    int opcao = 0;
+    printf("\n==== MENU DE EXERCÍCIOS ====");
+    printf("\n1 - Sequência de Fibonacci");
+    printf("\n2 - Fatoriais");
+    printf("\n3 - Verificar Palíndromo");
+    printf("\n4 - Verificar Substring");
+
+    scanf("%i", &opcao);
+
+    switch (opcao)
+    {
+    case 1:
+        sequencia_fibonacci(1);
+        break;
+    
+    default:
+        break;
+    }
+}
+
+int main() {
+    menu();
+    return 0;
+}
