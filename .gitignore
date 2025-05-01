@@ -4,6 +4,7 @@
 *.obj
 *.exe
 *.gch
+main
 
 # Ignorar diretórios de compilação
 output/
