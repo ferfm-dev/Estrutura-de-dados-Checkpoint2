@@ -16,6 +16,8 @@ void palindromo() {
         index_aux++;
     }
 
+    aux[index_aux]  =  '\0';
+
     if (strcmp(palavra, aux) == 0) {
         printf("\nA palavra é um palíndromo.");
     } else {
