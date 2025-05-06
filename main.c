@@ -2,6 +2,14 @@
 #include <locale.h>
 #include <string.h>
 
+/*
+INTEGRANTES:
+Fernando Melo - RM 564297
+Ryan Santos - RM 565102
+Pedro Henrique Martins 564090
+*/
+
+
 void fatoriais(){
     int n, resultado;
     printf("\nDigite um número inteiro (1 a 20):");
