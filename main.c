@@ -10,7 +10,7 @@ void fatoriais(){
     printf("\nFatoriais:\n");
     for (int i = 1; i <= n; i++) {
         printf("%i! = ", i);
-        reultado = 1;
+        resultado = 1;
         for (int j = i; j >= 1; j--){
             resultado *= j;
         }
