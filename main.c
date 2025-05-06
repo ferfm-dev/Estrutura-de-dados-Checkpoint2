@@ -2,6 +2,23 @@
 #include <locale.h>
 #include <string.h>
 
+void fatoriais(){
+    int n, resultado;
+    printf("\nDigite um número inteiro (1 a 20):");
+    scanf("%i", &n);
+    
+    printf("\nFatoriais:\n");
+    for (int i = 1; i <= n; i++) {
+        printf("%i! = ", i);
+        reultado = 1;
+        for (int j = i; j >= 1; j--){
+            resultado *= j;
+        }
+        printf("%i\n", resultado);
+    } 
+    
+}
+
 void palindromo() {
     char palavra[100];
     char aux[100];
@@ -105,14 +122,16 @@ void menu() {
     case 1:
         sequencia_fibonacci();
         break;
+    case 2:
+        fatoriais();
+        break;
     case 3:
         palindromo();
         break;
     case 4:
         verificar_substring();
         break;
-    default:
-        break;
+    
     }
 }
 
@@ -122,3 +141,4 @@ int main() {
     menu();
     return 0;
 }
+
