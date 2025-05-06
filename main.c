@@ -2,6 +2,27 @@
 #include <locale.h>
 #include <string.h>
 
+void palindromo() {
+    char palavra[100];
+    char aux[100];
+    int index_aux = 0;
+    
+    printf("\nDigite uma palavra: ");
+    scanf("%s", palavra);
+
+    int tamanho = strlen(palavra);
+    for (int i = tamanho - 1; i >= 0; i--) {
+        aux[index_aux] = palavra[i];
+        index_aux++;
+    }
+
+    if (strcmp(palavra, aux) == 0) {
+        printf("\nA palavra é um palíndromo.");
+    } else {
+        printf("\nA palavra NÃO é um palíndromo.");
+    }
+}
+
 int sequencia_fibonacci() {
     int tamanho = 0;
     printf("\nDigite a quantidade de termos da sequência de Fibonacci (1 a 50): ");
@@ -81,6 +102,9 @@ void menu() {
     {
     case 1:
         sequencia_fibonacci();
+        break;
+    case 3:
+        palindromo();
         break;
     case 4:
         verificar_substring();
